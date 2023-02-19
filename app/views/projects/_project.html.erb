@@ -1,0 +1,40 @@
+<li class="list-group-item" id="<%= dom_id project %>">
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <!-- Avatar -->
+            <%= link_to project, class: "avatar avatar-lg" do %>
+                <%= cl_image_tag(project.image, :format => "jpg", :width => 100, :height => 200, class: "avatar-img rounded" ) %>
+            <% end %>
+        </div>
+        <div class="col ms-n2">
+
+            <!-- Title -->
+            <h4 class="mb-1 name">
+                <%= link_to project.title, project %>
+            </h4>
+
+            <!-- Time -->
+            <p class="card-text small text-muted">
+                Created on <time datetime="2018-01-03"> <%=  project.created_at %></time>
+            </p>
+        </div>
+        <div class="col-auto">
+           <!-- Button -->
+           <%= link_to "See Project", project, class: "btn btn-sm btn-white d-none d-md-inline-block" %>
+        </div>
+        <div class="col-auto">
+            <!-- Dropdown -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fe fe-more-vertical"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <%= link_to "Edit project", edit_project_path(project), class: "dropdown-item" %>
+                    <%= button_to "Delete project", project, method: :delete, class: "dropdown-item" %>
+                </div>
+            </div>
+       </div>
+    </div> <!-- / .row -->
+</li>
+
+

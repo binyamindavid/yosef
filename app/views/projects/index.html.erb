@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-12 col-lg-12 col-xl-12">
+        <div class="header mt-md-5">
+            <div class="header-body">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h6 class="header-pretitle">
+                            Projects
+                        </h6>
+                        <h1 class="header-title">
+                           Projects
+                        </h1>
+                    </div>
+                    <div class="col-auto">
+                        <%= link_to "New project", new_project_path, class: "btn btn-primary btn-sm ms-2" %>
+                    </div>
+                </div> <!-- / .row -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <ul class="list-group list-group-lg list-group-flush list my-n4">
+                    <% @projects.each do |project| %>
+                        <%= render project %>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

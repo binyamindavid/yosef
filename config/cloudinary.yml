@@ -1,0 +1,20 @@
+---
+development:
+  cloud_name: lofdwwlay
+  api_key: '755858692698996'
+  api_secret: QhdWRNGpZF4Z4YlI3RLz2-VguoE
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: lofdwwlay
+  api_key: '755858692698996'
+  api_secret: QhdWRNGpZF4Z4YlI3RLz2-VguoE
+  enhance_image_tag: true
+  static_file_support: true
+  secure: true
+test:
+  cloud_name: lofdwwlay
+  api_key: '755858692698996'
+  api_secret: QhdWRNGpZF4Z4YlI3RLz2-VguoE
+  enhance_image_tag: true
+  static_file_support: false

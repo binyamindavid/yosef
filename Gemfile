@@ -53,6 +53,9 @@ gem 'country_select'
 gem 'friendly_id', '~> 5.4.0'
 gem 'devise'
 
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
+gem 'cloudinary'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

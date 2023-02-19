@@ -251,9 +251,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a href="/wizard.html" class="nav-link {{#is page 'wizard.html'}}active{{/is}}">
-                  Wizard
-                </a>
+                <%= link_to "Projects",  projects_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
                 <a href="/kanban.html" class="nav-link {{#is page 'kanban.html'}}active{{/is}}">
@@ -278,10 +276,11 @@
             </ul>
           </div>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link {{#is page 'widgets.html'}}active{{/is}}" href="/widgets.html">
-            <i class="fe fe-grid"></i> Widgets
-          </a>
+          <%= link_to projects_path, class: "nav-link #{page_state(projects_path)}" do %>
+            <i class="fe fe-grid"></i> Projects
+          <% end %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
@@ -594,7 +593,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/docs/changelog.html">
+          <a class="nav-link" href="/docs/changelog.html">
             <i class="fe fe-git-branch"></i> Changelog <span class="badge bg-primary ms-auto">v2</span>
           </a>
         </li>
