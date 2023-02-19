@@ -1,0 +1,37 @@
+<div class="col-12 col-md-5 col-lg-6 col-xl-4 px-lg-6 my-5 align-self-center">
+    <h1 class="display-4 text-center mb-3">
+        Sign up
+    </h1>
+    <p class="text-muted text-center mb-5">
+        Free access to our dashboard.
+    </p>
+
+    <%= flash_messages layout_flash: true %>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up", class: "btn btn-lg w-100 btn-primary mb-3" %>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+</div>
+<div class="col-12 col-md-7 col-lg-6 col-xl-8 d-none d-lg-block">
+    <div class="bg-cover h-100 min-vh-100 mt-n1 me-n3 login_side"></div>
+</div>

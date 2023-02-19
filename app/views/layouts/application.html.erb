@@ -11,12 +11,20 @@
   </head>
 
   <body>
-     <%= render 'shared/side' %>
-     <div class="main-content">
-        <%= render "shared/top" %>
-        <div class="container-fluid">
-            <%= yield %>
+     <%- if user_signed_in? %>
+         <%= render 'shared/side' %>
+         <div class="main-content">
+            <%= render "shared/top" %>
+            <div class="container-fluid">
+                <%= yield %>
+             </div>
          </div>
-     </div>
+     <% else %>
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+                <%= yield %>
+            </div>
+          </div>
+     <% end %>
   </body>
 </html>

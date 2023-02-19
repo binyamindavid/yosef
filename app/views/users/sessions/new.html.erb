@@ -1,0 +1,32 @@
+<div class="col-12 col-md-5 col-lg-6 col-xl-4 px-lg-6 my-5 align-self-center">
+    <h1 class="display-4 text-center mb-3">
+        Sign in
+    </h1>
+    <p class="text-muted text-center mb-5">
+        Free access to our dashboard.
+    </p>
+
+    <%= flash_messages layout_flash: true %>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Log in", class: "btn btn-lg w-100 btn-primary mb-3" %>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+</div>
+<div class="col-12 col-md-7 col-lg-6 col-xl-8 d-none d-lg-block">
+    <div class="bg-cover h-100 min-vh-100 mt-n1 me-n3 login_side"></div>
+</div>
