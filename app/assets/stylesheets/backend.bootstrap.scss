@@ -1,0 +1,9 @@
+// Theme variables
+@import 'backend/theme/variables';
+
+@import 'backend/scaffold';
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+// Theme core
+@import 'backend/theme/theme';

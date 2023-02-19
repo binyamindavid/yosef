@@ -1,2 +1,13 @@
+@import 'backend/user-variables';
+
+// Theme variables
+@import 'backend/theme/dark/variables-dark';
+@import 'backend/theme/variables';
+
+
+@import 'backend/scaffold';
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+// Theme core
+@import 'backend/theme/theme';
